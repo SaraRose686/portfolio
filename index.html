@@ -9,44 +9,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" 
         crossorigin="anonymous" />
-    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Clicker+Script|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="module" src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <figure>
-            <a href="#">
-                <img class="headerIcon" src="bytesize-icons/icons/code.svg" alt="I am a coder." />
-            </a>
-        </figure>
-        <nav>
-            <img class="menuBars" src="/bytesize-icons/icons/menu.svg" alt="Collapse menu" />
-            <ul class="menu">
-                <li>
-                    <a href="#" >
-                        <img class="menuIcon" src="bytesize-icons/icons/user.svg" alt="About Me" />
-                        <strong class="menuText">About</strong> 
-                    </a>
-                </li>
-                <li>
-                    <a href="#" onclick="">
-                        <img class="menuIcon" src="bytesize-icons/icons/portfolio.svg" alt="My Portfolio" />
-                        <strong class="menuText">Portfolio</strong>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img class="menuIcon" src="bytesize-icons/icons/mail.svg" alt="Contact Me" />
-                        <strong class="menuText">Contact</strong>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+
+    <header id="pageHeader">
+        <h1>Sara Rose</h1>
+        <img src="/bytesize-icons/icons/menu.svg" alt="Expand/Collapse menu">
     </header>
+    
+    <nav>
+        <figure>
+            <div></div>
+            <figcaption>Sara Rose</figcaption>
+        </figure>
+        <ul>
+            <li>
+                <a href="#" >
+                    <img class="menuIcon" src="bytesize-icons/icons/home.svg" alt="Intro" />
+                    <strong class="menuText">Intro</strong> 
+                </a>
+            </li>
+            <li>
+                <a href="#" >
+                    <img class="menuIcon" src="bytesize-icons/icons/user.svg" alt="About Me" />
+                    <strong class="menuText">About</strong> 
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="">
+                    <img class="menuIcon" src="bytesize-icons/icons/portfolio.svg" alt="My Portfolio" />
+                    <strong class="menuText">Portfolio</strong>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="menuIcon" src="bytesize-icons/icons/mail.svg" alt="Contact Me" />
+                    <strong class="menuText">Contact</strong>
+                </a>
+            </li>
+        </ul>
+        <footer>
+            <a href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </footer>
+    </nav>
+    
+    
     <main>
-        <article>
+        <header id="whiteRoseBanner">
+            White Rose Banner Image
+        </header>
+    
+        <section>
+            Introduction Section
+        </section>
+
+        <section>
+            About Me
+        </section>
+
+        <section>
+            Portfolio
+        </section>
+    
+        <section>
+            Contact Form
+        </section>
+
+<!-- No content yet for wireframe.
+        <section>
             <h1>Sara Rose</h1>
             <h3>Yes, this is the site you are looking for! </h3>
             <h2>I am a 
@@ -55,8 +96,8 @@
             </h2>
             <h3>or whatever title your company may use,
                 <br>but you can just call me Sara.</h3>
-        </article>
-        <article class="portfolio">
+        </section>
+        <section class="portfolio">
             <h1>Bible Quest</h1>
             <p>
                 How well do you know the Bible? Start your quest for Bible knowledge with this quiz web app. Answer 10 multiple choice Bible trivia questions to learn more about the stories in Bible.  For more information on each question, follow the Bible Gateway hyperlink to read the Bible passage. 
@@ -75,12 +116,11 @@
             <h2>Find it here</h2>
                 <a href="https://sararose686.github.io/bible-quiz-app/">Live Quiz</a><br>
                 <a href="https://github.com/SaraRose686/bible-quiz-app">GitHub Repo</a>
-        </article>
-
+        </section>
+-->
     </main>
-    <footer>
-<!--    Currently empty -->
-    </footer>
+    
+    
 </body>
 
 </html>

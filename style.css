@@ -2,73 +2,62 @@
     box-sizing: border-box;
 }
 
-
+/* Mobile First design */
 body {
-    font-family: serif; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
 }
 
-header {
+#pageHeader {
     display: flex;
     justify-content: space-between;
-    position: fixed;
     width: 100%;
-    margin: 0;
-    border-bottom: 1px solid gray;
-    padding: 12px 10px;
-    color: white;
-    font-weight: bold;
+    height: 30px;
+    background-color: #d3d3d3;
+    position: fixed;
+    top: 0;
+    padding: 5px;
     z-index: 1;
 }
 
-figure {
+h1 {
+    font-size: 1.3em;
     margin: 0;
 }
 
 nav {
-    text-align: right;
-    vertical-align: middle;
+    display: none;
 }
 
 a {
     text-decoration: none;
 }
 
-.menu {
-    display: none;
-    vertical-align: middle;
-    list-style: none;
-    
-}
-
 main {
+    margin-top: 30px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 5px 25px;
 }
 
-.portfolio {
-    display: none;
-    position: absolute;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    border: 2px solid;
-    background-color: silver;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+#whiteRoseBanner {
+    min-height: 400px;
+    padding: 6% 0;
 }
 
-.portfolio ul {
-    list-style: none;
-    padding: 0;
+section {
+    min-height: 300px;
+    padding: 6% 0;
+    background-color: #bbb;
+}
+  
+section:nth-child(even) {
+    background-color: #ddd;
 }
 
 .unsplashLogo {
@@ -82,20 +71,46 @@ main {
 
 /* Styling for Tablet size screen */
 @media screen and ( min-width: 550px ) {
-    
-header {
-    display: flex;
-}
 
-.menuBars {
-    display: none;
-}
-
-.menu {
+nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 15%;
+    height: 100vh;
     margin: 0;
+    right: 0;
+    position: fixed;
+    padding: 15px 0;
+    color: white;
+    background-color: gray;
+    vertical-align: middle;
+}
+
+nav figure,
+nav footer {
+    display: none;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+nav li {
+    border-bottom: 2px solid black;
+    padding: 5px 0;
+}
+
+nav li:nth-last-child(1) {
+    border-bottom: 0;
+}
+
+main {
+    margin-right: 15%;
 }
 
 .menuText {
@@ -107,15 +122,22 @@ header {
 /* Styling for Computer size screen */
 @media screen and ( min-width: 850px ) {
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    
+#pageHeader {
+    display: none;
 }
 
-.menu > li {
-    padding: 0 10px;
+nav {
+    width: 30%;
+}
+
+nav figure,
+nav footer {
+    display: block;
+}
+
+main {
+    margin-top: 0;
+    margin-right: 30%;
 }
 
 .menuText {
