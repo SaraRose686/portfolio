@@ -9,45 +9,59 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    min-width: 300px;
+    height: 100vh;
+    /* Implement Grid layout */
+    display: grid;
+    grid-template-rows: [page-top] 50px [main-top] auto [page-bottom];
+    grid-template-columns: [page-left] auto [page-right];
+    overflow: hidden;
 }
 
 #pageHeader {
+    grid-row: page-top / main-top;
+    grid-column: page-left / page-right;
+    /* Flex-box inside Page Header */
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 30px;
-    background-color: #d3d3d3;
-    position: fixed;
-    top: 0;
-    padding: 5px;
-    z-index: 1;
+    background-color: #26201D;
+    padding: 5px 25px;
+    vertical-align: center;
+}
+
+#sideBar {
+    display: none;
+}
+
+main {
+    grid-row: main-top / page-bottom;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: #26201D;
+    
 }
 
 h1 {
-    font-size: 1.3em;
+    font-family: 'Clicker Script', cursive;
+    color: #F2F2F2;
     margin: 0;
-}
-
-nav {
-    display: none;
 }
 
 a {
     text-decoration: none;
 }
 
-main {
-    margin-top: 30px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
 #whiteRoseBanner {
-    min-height: 400px;
-    padding: 6% 0;
+    min-height: 300px;
+    width: calc(100% -20px);
+    background: url("/images/whiterose.JPEG") no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    border-radius: 25px;
+    margin: 10px;
+    overflow: hidden;
 }
 
 section {
@@ -72,46 +86,51 @@ section:nth-child(even) {
 /* Styling for Tablet size screen */
 @media screen and ( min-width: 550px ) {
 
-nav {
+body {
+    grid-template-columns: [page-left main-left] 1fr [main-right] 100px [page-right];
+}
+
+main {
+    grid-column: main-left / main-right;
+    
+}
+
+#sideBar {
+    grid-row: main-top / page-bottom;
+    grid-column: main-right / page-right;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    width: 15%;
     height: 100vh;
-    margin: 0;
-    right: 0;
-    position: fixed;
-    padding: 15px 0;
-    color: white;
-    background-color: gray;
+    box-sizing: border-box;
+    color: #F2F2F2;
+    background-color: #26201D;
     vertical-align: middle;
 }
 
-nav figure,
-nav footer {
+#sideBar figure,
+#sideBar footer {
     display: none;
     margin: 0;
 }
 
-nav ul {
+#sideBar ul {
     list-style: none;
     padding: 0;
 
 }
 
-nav li {
+#sideBar li {
     border-bottom: 2px solid black;
     padding: 5px 0;
 }
 
-nav li:nth-last-child(1) {
+#sideBar li:nth-last-child(1) {
     border-bottom: 0;
 }
 
-main {
-    margin-right: 15%;
-}
+
 
 .menuText {
     display: none;
@@ -122,23 +141,26 @@ main {
 /* Styling for Computer size screen */
 @media screen and ( min-width: 850px ) {
 
+body {
+    grid-template-rows: [main-top] auto [page-bottom];
+    grid-template-columns: [page-left main-left] 1fr [main-right] 200px [page-right];
+}
+
 #pageHeader {
     display: none;
 }
 
-nav {
-    width: 30%;
+#whiteRoseBanner {
+    border-radius: 0;
+    margin: 0;
 }
 
-nav figure,
-nav footer {
+#sideBar figure,
+#sideBar footer {
     display: block;
 }
 
-main {
-    margin-top: 0;
-    margin-right: 30%;
-}
+
 
 .menuText {
     display: inherit;
