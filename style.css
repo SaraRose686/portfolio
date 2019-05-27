@@ -77,7 +77,7 @@ a:hover {
 #whiteRoseBanner {
     min-height: 300px;
     width: 100%;
-    background: url("images/whiterose.JPEG") no-repeat center center;
+    background: url("images/whiterose.jpg") no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
