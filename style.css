@@ -6,27 +6,34 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    text-align: center;
+    line-height: 1.5em;
     margin: 0;
-    padding: 0;
-    min-width: 300px;
+    padding: 15px;
+    min-width: 320px;
     height: 100vh;
+    color: #F2F2F2;
+    background-color: #26201D;
     /* Implement Grid layout */
     display: grid;
-    grid-template-rows: [page-top] 50px [main-top] auto [page-bottom];
-    grid-template-columns: [page-left] auto [page-right];
+    grid-template-rows: [page-top] 65px [main-top] 1fr [page-bottom];
+    grid-template-columns: [page-left main-left] 1fr [main-right] 65px [page-right];
     overflow: hidden;
 }
 
 #pageHeader {
     grid-row: page-top / main-top;
-    grid-column: page-left / page-right;
-    /* Flex-box inside Page Header */
+    grid-column: page-left / main-right;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    background-color: #26201D;
-    padding: 5px 25px;
-    vertical-align: center;
+    justify-content: center;
+    align-items: top;
+}
+
+#menuHeader {
+    grid-row: page-top / main-top;
+    grid-column: main-right / page-right;
+    text-align: right;
+    font-size: 2em;
 }
 
 #sideBar {
@@ -35,64 +42,87 @@ body {
 
 main {
     grid-row: main-top / page-bottom;
+    grid-column: main-left / page-right;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    background-color: #26201D;
-    
+    border-radius: 15px;
+    color: #2B400C;
 }
 
 h1 {
     font-family: 'Clicker Script', cursive;
     color: #F2F2F2;
     margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: 'Anonymous Pro', monospace;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    font-size: larger;
+}
+
+.icon {
+    font-size: 2.0em;
 }
 
 #whiteRoseBanner {
     min-height: 300px;
-    width: calc(100% -20px);
+    width: 100%;
     background: url("/images/whiterose.JPEG") no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    border-radius: 25px;
-    margin: 10px;
     overflow: hidden;
 }
 
 section {
-    min-height: 300px;
-    padding: 6% 0;
-    background-color: #bbb;
-}
-  
-section:nth-child(even) {
-    background-color: #ddd;
+    padding: 5%;
+    background-color: #F2ECD8;
+    overflow: visible;
+    border-bottom: 1px dotted #2B400C;
 }
 
-.unsplashLogo {
-    height:12px;
-    width:auto;
-    position:relative;
-    vertical-align:middle;
-    top:-2px;
-    fill:black;
+section:nth-last-child(1) {
+    border-bottom: 0;
+}
+
+#introSection {
+    text-align: center;
+}
+
+#aboutSection img {
+    width: 50%;
+    margin: 0 15px 15px 0;
+    float: left;
+}
+
+#bqImage {
+    width: 50%;
+
+}
+
+form * {
+    display: block;
 }
 
 /* Styling for Tablet size screen */
 @media screen and ( min-width: 550px ) {
 
 body {
-    grid-template-columns: [page-left main-left] 1fr [main-right] 100px [page-right];
+    font-size: 18px;
 }
 
 main {
     grid-column: main-left / main-right;
-    
 }
 
 #sideBar {
@@ -102,14 +132,12 @@ main {
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    height: 100vh;
-    box-sizing: border-box;
     color: #F2F2F2;
     background-color: #26201D;
     vertical-align: middle;
 }
 
-#sideBar figure,
+#sideBar h1,
 #sideBar footer {
     display: none;
     margin: 0;
@@ -122,14 +150,10 @@ main {
 }
 
 #sideBar li {
-    border-bottom: 2px solid black;
     padding: 5px 0;
+    text-align: right;
+    vertical-align: middle;
 }
-
-#sideBar li:nth-last-child(1) {
-    border-bottom: 0;
-}
-
 
 
 .menuText {
@@ -144,9 +168,12 @@ main {
 body {
     grid-template-rows: [main-top] auto [page-bottom];
     grid-template-columns: [page-left main-left] 1fr [main-right] 200px [page-right];
+    margin: 0;
+    font-size: 20px;
 }
 
-#pageHeader {
+#pageHeader,
+#menuHeader {
     display: none;
 }
 
@@ -155,7 +182,7 @@ body {
     margin: 0;
 }
 
-#sideBar figure,
+#sideBar h1,
 #sideBar footer {
     display: block;
 }

@@ -9,113 +9,122 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" 
         crossorigin="anonymous" />
-    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Clicker+Script|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="module" src="script.js"></script>
-    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js" defer></script>
+    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
 </head>
 
 <body>
 
     <header id="pageHeader">
-        <h1>Sara Rose <img src="bytesize-icons/icons/code.svg" alt="I code." /> </h1>
-        <img src="bytesize-icons/icons/menu.svg" alt="Expand/Collapse menu">
+        <h1>Sara Rose
+        <i class="iconify" data-icon="bytesize:code"></i></h1>
     </header>
+
+    <div id="menuHeader">
+        <i class="iconify" data-icon="bytesize:menu" class="icon"></i>
+    </div>
     
     <nav id="sideBar">
-        <figure>
-            <figcaption><h1>Sara Rose</h1></figcaption>
-            <img src="bytesize-icons/icons/code.svg" alt="I code." />
-        </figure>
+        <h1>Sara Rose
+            <i class="iconify" data-icon="bytesize:code"></i>
+        </h1>
         <ul>
             <li>
-                <a href="#" >
-                    <img class="menuIcon" src="bytesize-icons/icons/home.svg" alt="Intro" />
+                <a href="#introSection" >
                     <strong class="menuText">Intro</strong> 
+                    <i class="iconify icon menuIcon" data-icon="bytesize:home" ></i>
                 </a>
             </li>
             <li>
-                <a href="#" >
-                    <img class="menuIcon" src="bytesize-icons/icons/user.svg" alt="About Me" />
+                <a href="#aboutSection" >
                     <strong class="menuText">About</strong> 
+                    <i class="iconify icon menuIcon" data-icon="bytesize:user" ></i>
                 </a>
             </li>
             <li>
-                <a href="#" onclick="">
-                    <img class="menuIcon" src="bytesize-icons/icons/portfolio.svg" alt="My Portfolio" />
+                <a href="#portfolioSection">
                     <strong class="menuText">Portfolio</strong>
+                    <i class="iconify icon menuIcon" data-icon="bytesize:portfolio" ></i>
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <img class="menuIcon" src="bytesize-icons/icons/mail.svg" alt="Contact Me" />
+                <a href="#contactSection">
                     <strong class="menuText">Contact</strong>
+                    <i class="iconify icon menuIcon" data-icon="bytesize:mail" ></i>
                 </a>
             </li>
         </ul>
         <footer>
-            <a href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-            <a href="">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
+            <a href="https://www.linkedin.com/in/sreidealtman/" target="_blank" >
+                <iconify-icon data-icon="ion:logo-linkedin" class="icon"></iconify-icon></a>
+            <a href="https://github.com/SaraRose686" target="_blank">
+                <iconify-icon data-icon="ion:logo-github" class="icon"></iconify-icon></a>
         </footer>
     </nav>
     
     <main>
-        <header id="whiteRoseBanner" role="banner" class="banner" >
-        </header>
-    
-        <section>
-            Introduction Section
-        </section>
-
-        <section>
-            About Me
-        </section>
-
-        <section>
-            Portfolio
-        </section>
-    
-        <section>
-            Contact Form
-        </section>
-
-<!-- No content yet for wireframe.
-        <section>
-            <h1>Sara Rose</h1>
-            <h3>Yes, this is the site you are looking for! </h3>
-            <h2>I am a 
-                <span class="title1" role="none">computer/software/web/front-end/back-end/full-stack/application</span> 
+        <header id="whiteRoseBanner" role="banner" class="banner" ></header>
+        <section id="introSection">
+            <h3>Yes, this is the page you are looking for! </h3>
+            <h2>I am a <br>
+                <span class="title1" role="none">computer/software/web/front-end/back-end/full-stack/application</span> <br>
                 <span class="title2" role="none">programmer/developer/engineer/analyst</span>.
             </h2>
             <h3>or whatever title your company may use,
                 <br>but you can just call me Sara.</h3>
         </section>
-        <section class="portfolio">
-            <h1>Bible Quest</h1>
+
+        <section  id="aboutSection">
+            <h2>A Little About Me</h2> 
+            <img src="/images/sara.JPG" alt="Picture of Me">
+            <p>
+                Born/raised in Maryland, I transplanted to California for college.  Originally a pure mathematician, I fell in love with coding during my “Introduction to Programming” course. Prepared with additional computer science courses, I started my career as a Java Developer at Accenture after graduating with a B.S. in Mathematics. After a period working in management, I have returned to my original passion: development.
+            </p>
+            <p>
+                Today, I am fine tuning my web development skills in the Bloc Web Developer Track program.  I am currently versed in HTML, CSS, Javascript, jQuery, Java, Spring, JSP, SQL, XML, C/C++, C#; as well, I have experience using Eclipse, Visual Studio Code, Git, GitHub, Bitbucket, Jira, Rational ClearCase, Oracle 11g, SOAP.  Proficient with both Windows and OSX, I recently began using Ubuntu to learn more about Linux.  In the near future, I also plan to explore the following topics: AJAX, APIs, React, Express, Jest, Enzyme, Zeit, Node, Postgres, REST/RESTful, Heroku, Angular, MongoDB, Python.
+            </p>
+        </section>
+
+        <section  id="portfolioSection">
+            <h2>Bible Quest</h2>
+            <div role="none" id="bqCarousel">
+                <span class="iconify" data-icon="bytesize:chevron-left"></span>
+                <img src="/images/1-home.jpg" alt="Bible Quiz Home" id="bqImage">
+                <span class="iconify" data-icon="bytesize:chevron-right"></span>
+            </div>
+            
             <p>
                 How well do you know the Bible? Start your quest for Bible knowledge with this quiz web app. Answer 10 multiple choice Bible trivia questions to learn more about the stories in Bible.  For more information on each question, follow the Bible Gateway hyperlink to read the Bible passage. 
             </p>
-            <h2>Technologies Used</h2>
+            <h3>Technologies Used</h3>
             <ul>
-                <li><i class="devicons devicons-html5"></i> HTML5</li>
-                <li><i class="devicons devicons-css3"></i> CSS3</li>
-                <li><i class="devicons devicons-javascript_badge"></i> Javascript</li>
-                <li><i class="devicons devicons-jquery"></i> jQuery (including jQueryValidation plugin)</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" class="unsplashLogo" viewBox="0 0 32 32">
-                        <title>unsplash-logo</title>
-                        <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-                    </svg> Unsplash images</li>
+                <li><i class="iconify icon:simple-icons:html5"></i> HTML5</li>
+                <li><i class="iconify icon:simple-icons:css3"></i> CSS3</li>
+                <li><i class="iconify icon:simple-icons:javascript"></i> Javascript</li>
+                <li><i class="iconify icon:simple-icons:jquery"></i> jQuery (including jQueryValidation plugin)</li>
+                <li><i class="iconify icon:simple-icons:unsplash"></i> Unsplash images</li>
             </ul>
-            <h2>Find it here</h2>
-                <a href="https://sararose686.github.io/bible-quiz-app/">Live Quiz</a><br>
+            <h3>Find it here</h3>
+                <a href="https://sararose686.github.io/bible-quiz-app/">Live Quiz</a> |
                 <a href="https://github.com/SaraRose686/bible-quiz-app">GitHub Repo</a>
         </section>
--->
+    
+        <section  id="contactSection">
+            <h2>Contact Me</h2>
+            <form role="form" class="formContact" method="POST" action="">
+                <input type="text" name="name" id="name" placeholder="* Name" required />
+                <input type="email" name="email" id="email" placeholder="* Email" required />
+                <textarea name="message" id="message"  placeholder="Write me a message..."></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <a href="https://www.linkedin.com/in/sreidealtman/" target="_blank" >
+                <iconify-icon data-icon="ion:logo-linkedin" class="icon"></iconify-icon></a>
+            <a href="https://github.com/SaraRose686" target="_blank">
+                <iconify-icon data-icon="ion:logo-github" class="icon"></iconify-icon></a>
+        </section>
+
     </main>
     
     
