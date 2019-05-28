@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" 
         crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Clicker+Script|Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Clicker+Script|Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <script type="module" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous" defer></script>
     <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -32,50 +35,73 @@
         </h1>
         <ul>
             <li>
-                <a href="#introSection" >
-                    <strong class="menuText">Intro</strong> 
+                <a href="#whiteRoseBanner" >
+                    <span class="menuText">Intro</span> 
                     <i class="iconify icon menuIcon" data-icon="bytesize:home" ></i>
                 </a>
             </li>
             <li>
-                <a href="#aboutSection" >
-                    <strong class="menuText">About</strong> 
-                    <i class="iconify icon menuIcon" data-icon="bytesize:user" ></i>
-                </a>
-            </li>
-            <li>
                 <a href="#portfolioSection">
-                    <strong class="menuText">Portfolio</strong>
+                    <span class="menuText">Portfolio</span>
                     <i class="iconify icon menuIcon" data-icon="bytesize:portfolio" ></i>
                 </a>
             </li>
             <li>
-                <a href="#contactSection">
-                    <strong class="menuText">Contact</strong>
-                    <i class="iconify icon menuIcon" data-icon="bytesize:mail" ></i>
+                <a href="#aboutSection" >
+                    <span class="menuText">About</span> 
+                    <i class="iconify icon menuIcon" data-icon="bytesize:user" ></i>
                 </a>
             </li>
         </ul>
         <footer>
             <a href="https://www.linkedin.com/in/sreidealtman/" target="_blank" >
-                <iconify-icon data-icon="ion:logo-linkedin" class="icon"></iconify-icon></a>
+                <iconify-icon data-icon="simple-icons:linkedin" class="icon"></iconify-icon></a>
             <a href="https://github.com/SaraRose686" target="_blank">
-                <iconify-icon data-icon="ion:logo-github" class="icon"></iconify-icon></a>
+                <iconify-icon data-icon="simple-icons:github" class="icon"></iconify-icon></a>
+            <a href="mailto:sararose686@gmail.com">
+                <iconify-icon data-icon="bytesize:mail" class="icon"></iconify-icon></a>
         </footer>
     </nav>
     
     <main>
         <header id="whiteRoseBanner" role="banner" class="banner" ></header>
         <section id="introSection">
-            <h3>Yes, this is the page you are looking for! </h3>
-            <h2>I am a <br>
-                <span class="title1" role="none">computer/software/web/front-end/back-end/full-stack/application</span> <br>
-                <span class="title2" role="none">programmer/developer/engineer/analyst</span>.
+            <p>Yes, this is the page you are looking for! </p>
+            <h2>
+                I'm a<span id="titleFirst" role="none">n application</span> 
+                <span id="titleSecond" role="none">developer</span>.
             </h2>
-            <h3>or whatever title your company may use,
-                <br>but you can just call me Sara.</h3>
+            <p>or whatever title your company may use,
+                <br>but you can just call me Sara.</p>
         </section>
 
+        <section  id="portfolioSection">
+            <h2>My Portfolio Projects</h2>
+            <h3>Bible Quest</h3>
+            <div role="none" id="bqCarousel">
+                <span class="iconify" data-icon="bytesize:chevron-left"></span>
+                <img src="images/1-home.jpg" alt="Bible Quiz Home" id="bqImage">
+                <span class="iconify" data-icon="bytesize:chevron-right"></span>
+            </div>
+            <p>
+                How well do you know the Bible? Start your quest for Bible knowledge with this quiz web app. 
+            </p>
+            <p>
+                Answer 10 multiple choice Bible trivia questions to learn more about the stories in Bible.  For more information on each question, follow the Bible Gateway hyperlink to read the Bible passage. 
+            </p>
+            <h4>Technologies Used</h4>
+            <ul>
+                <li><i class="iconify icon:simple-icons:html5"></i> HTML5</li>
+                <li><i class="iconify icon:simple-icons:css3"></i> CSS3</li>
+                <li><i class="iconify icon:simple-icons:javascript"></i> Javascript</li>
+                <li><i class="iconify icon:simple-icons:jquery"></i> jQuery (including jQueryValidation plugin)</li>
+                <li><i class="iconify icon:simple-icons:unsplash"></i> Unsplash images</li>
+            </ul>
+            <h4>Find it here</h4>
+                <a href="https://sararose686.github.io/bible-quiz-app/">Live Quiz</a> |
+                <a href="https://github.com/SaraRose686/bible-quiz-app">GitHub Repo</a>
+        </section>
+            
         <section  id="aboutSection">
             <h2>A Little About Me</h2> 
             <img src="images/sara.jpg" alt="Picture of Me">
@@ -85,44 +111,16 @@
             <p>
                 Today, I am fine tuning my web development skills in the Bloc Web Developer Track program.  I am currently versed in HTML, CSS, Javascript, jQuery, Java, Spring, JSP, SQL, XML, C/C++, C#; as well, I have experience using Eclipse, Visual Studio Code, Git, GitHub, Bitbucket, Jira, Rational ClearCase, Oracle 11g, SOAP.  Proficient with both Windows and OSX, I recently began using Ubuntu to learn more about Linux.  In the near future, I also plan to explore the following topics: AJAX, APIs, React, Express, Jest, Enzyme, Zeit, Node, Postgres, REST/RESTful, Heroku, Angular, MongoDB, Python.
             </p>
-        </section>
-
-        <section  id="portfolioSection">
-            <h2>Bible Quest</h2>
-            <div role="none" id="bqCarousel">
-                <span class="iconify" data-icon="bytesize:chevron-left"></span>
-                <img src="images/1-home.jpg" alt="Bible Quiz Home" id="bqImage">
-                <span class="iconify" data-icon="bytesize:chevron-right"></span>
-            </div>
-            
-            <p>
-                How well do you know the Bible? Start your quest for Bible knowledge with this quiz web app. Answer 10 multiple choice Bible trivia questions to learn more about the stories in Bible.  For more information on each question, follow the Bible Gateway hyperlink to read the Bible passage. 
-            </p>
-            <h3>Technologies Used</h3>
-            <ul>
-                <li><i class="iconify icon:simple-icons:html5"></i> HTML5</li>
-                <li><i class="iconify icon:simple-icons:css3"></i> CSS3</li>
-                <li><i class="iconify icon:simple-icons:javascript"></i> Javascript</li>
-                <li><i class="iconify icon:simple-icons:jquery"></i> jQuery (including jQueryValidation plugin)</li>
-                <li><i class="iconify icon:simple-icons:unsplash"></i> Unsplash images</li>
-            </ul>
-            <h3>Find it here</h3>
-                <a href="https://sararose686.github.io/bible-quiz-app/">Live Quiz</a> |
-                <a href="https://github.com/SaraRose686/bible-quiz-app">GitHub Repo</a>
-        </section>
-    
-        <section  id="contactSection">
             <h2>Contact Me</h2>
-            <form role="form" class="formContact" method="POST" action="">
-                <input type="text" name="name" id="name" placeholder="* Name" required />
-                <input type="email" name="email" id="email" placeholder="* Email" required />
-                <textarea name="message" id="message"  placeholder="Write me a message..."></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <p>
+                I am currently looking for work and can be found online or reached by using the following links:
+            </p>
             <a href="https://www.linkedin.com/in/sreidealtman/" target="_blank" >
-                <iconify-icon data-icon="ion:logo-linkedin" class="icon"></iconify-icon></a>
+                <iconify-icon data-icon="simple-icons:linkedin" class="icon"></iconify-icon></a>
             <a href="https://github.com/SaraRose686" target="_blank">
-                <iconify-icon data-icon="ion:logo-github" class="icon"></iconify-icon></a>
+                <iconify-icon data-icon="simple-icons:github" class="icon"></iconify-icon></a>
+            <a href="mailto:sararose686@gmail.com">
+                <iconify-icon data-icon="bytesize:mail" class="icon"></iconify-icon></a>
         </section>
 
     </main>

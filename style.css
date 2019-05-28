@@ -45,9 +45,13 @@ main {
     grid-column: main-left / page-right;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    overflow-y: scroll;
     border-radius: 15px;
     color: #2B400C;
+}
+
+main::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
@@ -59,19 +63,24 @@ h1 {
 
 h2 {
     font-family: 'Anonymous Pro', monospace;
+    margin: 1.5em 0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    -webkit-transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
 }
 
 a:hover {
     font-size: larger;
+    font-weight: bold;
 }
 
 .icon {
     font-size: 2.0em;
+    margin: 5px;
 }
 
 #whiteRoseBanner {
@@ -110,8 +119,9 @@ section:nth-last-child(1) {
 
 }
 
-form * {
-    display: block;
+#portfolioSection ul {
+    list-style: none;
+    padding-left: 20px;
 }
 
 /* Styling for Tablet size screen */
@@ -123,6 +133,10 @@ body {
 
 main {
     grid-column: main-left / main-right;
+}
+
+#menuHeader {
+    display: none;
 }
 
 #sideBar {
@@ -172,8 +186,7 @@ body {
     font-size: 20px;
 }
 
-#pageHeader,
-#menuHeader {
+#pageHeader{
     display: none;
 }
 
@@ -186,8 +199,6 @@ body {
 #sideBar footer {
     display: block;
 }
-
-
 
 .menuText {
     display: inherit;
