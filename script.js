@@ -6,31 +6,58 @@ let TITLE = {
     second: ["programmer", "developer", "engineer"],
     secondPos: 0,
     nextFirstTitle: () => TITLE.first[ (TITLE.firstPos++ % TITLE.first.length) ],
-    nextSecondTitle: () => TITLE.second[ (TITLE.secondPos++ % TITLE.second.length) ]
+    nextSecondTitle: () => TITLE.second[ (TITLE.secondPos++ % TITLE.second.length) ],
+    fps: 1,
 };
 
-function handleSendEmailMessage() {
+let BIBLE_QUEST_IMAGES = {
+    files: [{ 
+        src: "images/1-home.jpg",
+        alt: "Bible Quiz Home",
+    }, { 
+        src: "images/2-question.jpg",
+        alt: "Bible Quiz Home",
+    }, { 
+        src: "images/3-questionSelect.jpg",
+        alt: "Bible Quiz Home",
+    }, { 
+        src: "images/4-questionCorrect.jpg",
+        alt: "Bible Quiz Home",
+    }, { 
+        src: "images/5-bgTooltip.jpg",
+        alt: "Bible Quiz Home",
+    }, { 
+        src: "images/6-final.jpg",
+        alt: "Bible Quiz Home",
+    }],
+    position: 0
+};
 
-}
 
-function handleMenuExpandCollapse() {
-
-}
 
 function handleTitleTransition() {
-    $("#titleFirst").fadeOut("slow", () => {
-        $("#titleFirst").text(TITLE.nextFirstTitle()).fadeIn();
-    });
+    setTimeout( function() {
+        requestAnimationFrame(handleTitleTransition);
 
-    $("#titleSecond").fadeOut("slow", () => {
-        $("#titleSecond").text(TITLE.nextSecondTitle()).fadeIn();
-    });
+        $("#titleFirst").fadeTo("slow", 0, function() {
+            $(this).text(TITLE.nextFirstTitle()).fadeTo(400, 1);
+        });
+
+        $("#titleSecond").fadeTo("slow", 0, function() {
+            $(this).text(TITLE.nextSecondTitle()).fadeTo(400, 1);
+        });    
+    } , 1000/TITLE.fps)
+}
+
+function handleImageCarousel() {
+    return null;
 }
 
 function runPageEffects() {
-    setInterval(handleTitleTransition, 3000);
-    handleMenuExpandCollapse();
-    handleSendEmailMessage();
+    //setInterval(handleTitleTransition, 3000);
+    requestAnimationFrame(handleTitleTransition);
+    //handleTitleTransition();
+    handleImageCarousel();
 }
 
 $(runPageEffects);
