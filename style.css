@@ -37,6 +37,7 @@ body {
     color: #F2F2F2;
     background-color: #26201D;
     vertical-align: middle;
+    z-index: 1;
 }
 
 #sideBar h1,
