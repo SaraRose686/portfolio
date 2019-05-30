@@ -135,7 +135,6 @@ section:nth-last-child(1) {
     text-decoration: underline;
 }
 
-
 #aboutSection img {
     width: 50%;
     margin: 0 15px 15px 0;
@@ -170,8 +169,6 @@ section:nth-last-child(1) {
     justify-self: center;
 }
 
-
-
 /* Hiding sidebar for mobile size */
 @media screen and ( max-width: 549px ) {
 
@@ -190,7 +187,6 @@ section:nth-last-child(1) {
 }
 
 }
-
 
 /* Styling for Tablet size screen */
 @media screen and ( min-width: 550px ) {
@@ -211,7 +207,6 @@ main {
     grid-row: main-top / page-bottom;
     grid-column: main-right / page-right;
 }
-
 
 }
 
@@ -242,6 +237,5 @@ body {
 #sideBar .menuText {
     display: inherit;
 }
-
 
 }    

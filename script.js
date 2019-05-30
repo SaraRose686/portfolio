@@ -46,6 +46,7 @@ function handleTitleTransition() {
 }
 
 function handleImageCarousel() {
+    // Clicking to Previous Image
     $('#bqImagePrev').on('click', function(e) {
         BQ_IMAGES.pos = BQ_IMAGES.pos > 0 ? 
             BQ_IMAGES.pos-1 : 
@@ -56,6 +57,7 @@ function handleImageCarousel() {
         });
     });
 
+    // Clicking to Next Image
     $('#bqImageNext').on('click', function(e) {
         BQ_IMAGES.pos = BQ_IMAGES.pos < BQ_IMAGES.files.length-1 ?
             BQ_IMAGES.pos+1 : 0;
