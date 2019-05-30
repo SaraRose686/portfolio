@@ -14,7 +14,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous" defer></script>
-    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.3/velocity.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.3/velocity.ui.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -68,9 +70,11 @@
         <header id="whiteRoseBanner" role="banner" class="banner" ></header>
         <section id="introSection">
             <p>Yes, this is the page you are looking for! </p>
-            <h2>
-                I'm a<span id="titleFirst" role="none">n application</span> 
-                <span id="titleSecond" role="none">developer</span>.
+            <h2>I'm 
+                <a id="title" href="#">
+                    <span id="titleFirst" role="none">an application</span>
+                    <span id="titleSecond" role="none">developer</span>.
+                </a>
             </h2>
             <p>or whatever title your company may use,
                 <br>but you can just call me Sara.</p>
@@ -80,9 +84,13 @@
             <h2>My Portfolio Projects</h2>
             <h3>Bible Quest</h3>
             <div role="none" id="bqCarousel">
-                <iconify-icon id="bqImagePrev" data-icon="bytesize:chevron-left" class="icon"></iconify-icon>
+                <a id="bqImagePrev" href="#">
+                    <iconify-icon data-icon="bytesize:chevron-left" class="icon"></iconify-icon>
+                </a>
                 <img id="bqImage" src="images/1-home.jpg" alt="Bible Quiz Home">
-                <iconify-icon id="bqImageNext" data-icon="bytesize:chevron-right" class="icon"></iconify-icon>
+                <a id="bqImageNext" href="#">
+                    <iconify-icon data-icon="bytesize:chevron-right" class="icon"></iconify-icon>
+                </a>
             </div>
             <p>
                 How well do you know the Bible? Start your quest for Bible knowledge with this quiz web app. 

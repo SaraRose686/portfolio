@@ -96,7 +96,7 @@ a {
     transition: all 0.5s ease-in-out;
 }
 
-a:hover {
+a:not(#title):hover {
     font-size: larger;
     font-weight: bold;
 }
@@ -131,13 +131,10 @@ section:nth-last-child(1) {
     text-align: center;
 }
 
-#titleFirst {
-    min-width: 250px;
+#title {
+    text-decoration: underline;
 }
 
-#titleSecond {
-    min-width: 150px;
-}
 
 #aboutSection img {
     width: 50%;
