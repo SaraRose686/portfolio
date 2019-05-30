@@ -93,12 +93,7 @@ a {
     text-decoration: none;
     color: inherit;
     -webkit-transition: all 0.5s ease-in-out; 
-    transition: all 0.5s ease-in-out;
-}
-
-a:not(#title):hover {
-    font-size: larger;
-    font-weight: bold;
+    transition: all 0.5s ease-in-out; 
 }
 
 .icon {
@@ -168,6 +163,8 @@ section:nth-last-child(1) {
     max-width: 600px;
     justify-self: center;
 }
+
+
 
 /* Hiding sidebar for mobile size */
 @media screen and ( max-width: 549px ) {
