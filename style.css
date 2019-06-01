@@ -93,9 +93,18 @@ h2 {
 a {
     text-decoration: none;
     color: inherit;
-    -webkit-transition: all 0.5s ease-in-out; 
-    transition: all 0.5s ease-in-out; 
 }
+
+/* TODO: Figure out Safari issue with hover effect.
+-webkit-transition: all 0.5s ease-in-out; 
+transition: all 0.5s ease-in-out; 
+
+
+a:not(.title):hover {
+    font-weight: bold;
+    text-size: larger;
+}
+*/
 
 .icon {
     font-size: 2.0em;
@@ -127,7 +136,7 @@ section:nth-last-child(1) {
     text-align: center;
 }
 
-#title {
+.title {
     text-decoration: underline;
 }
 
@@ -142,29 +151,28 @@ section:nth-last-child(1) {
     padding-left: 20px;
 }
 
-#bqCarousel {
+.bqCarousel {
     display: grid;
     grid-template-columns: [carousel-left] 1fr [image-left] 8fr [image-right] 1fr [carousel-right];   
     align-items: center;
     justify-items: center;
 }
 
-#bqImagePrev {
+.bqImagePrev {
     grid-column: carousel-left / image-left;
 }
 
-#bqImageNext {
+.bqImageNext {
     grid-column: image-right / carousel-right;
 }
 
-#bqImage {
+.bqImage {
     grid-column: image-left / image-right;
     height: auto;
     width: 100%;
     max-width: 600px;
     justify-self: center;
 }
-
 
 
 /* Hiding sidebar for mobile size */
@@ -175,13 +183,13 @@ section:nth-last-child(1) {
     top: 0;
     bottom: 0;
     width: 80px;
-    right: -100px;
+    right: -550px;
     padding: 15px;
     transition: transform 0.5s ease-in-out;
 }
 
 #sideBar:target {
-    transform: translateX(-100px);
+    transform: translateX(-550px);
 }
 
 }

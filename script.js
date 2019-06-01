@@ -34,12 +34,12 @@ const BQ_IMAGES = {
 };
 
 function handleTitleTransition() {
-    $('#title').on('click', function(e) {
-        $("#titleFirst").fadeTo("slow", 0, function() {
+    $('.title').on('click', function(e) {
+        $(".titleFirst").fadeTo("slow", 0, function() {
             $(this).text(TITLE.nextFirstTitle()).fadeTo(400, 1);
         });
 
-        $("#titleSecond").fadeTo("slow", 0, function() {
+        $(".titleSecond").fadeTo("slow", 0, function() {
             $(this).text(TITLE.nextSecondTitle()).fadeTo(400, 1);
         });    
     });
@@ -47,23 +47,23 @@ function handleTitleTransition() {
 
 function handleImageCarousel() {
     // Clicking to Previous Image
-    $('#bqImagePrev').on('click', function(e) {
+    $('.bqImagePrev').on('click', function(e) {
         e.preventDefault();
         BQ_IMAGES.pos = BQ_IMAGES.pos > 0 ? 
             BQ_IMAGES.pos-1 : 
             BQ_IMAGES.files.length-1;
-        $('#bqImage').attr({
+        $('.bqImage').attr({
             'src': BQ_IMAGES.files[BQ_IMAGES.pos].src, 
             'alt': BQ_IMAGES.files[BQ_IMAGES.pos].alt
         });
     });
 
     // Clicking to Next Image
-    $('#bqImageNext').on('click', function(e) {
+    $('.bqImageNext').on('click', function(e) {
         e.preventDefault();
         BQ_IMAGES.pos = BQ_IMAGES.pos < BQ_IMAGES.files.length-1 ?
             BQ_IMAGES.pos+1 : 0;
-        $('#bqImage').attr({
+        $('.bqImage').attr({
             'src': BQ_IMAGES.files[BQ_IMAGES.pos].src, 
             'alt': BQ_IMAGES.files[BQ_IMAGES.pos].alt
         });
