@@ -58,6 +58,10 @@ body {
     vertical-align: middle;
 }
 
+#sideBar a {
+    text-decoration: none;
+}
+
 #sideBar .menuText {
     display: none;
 }
@@ -91,7 +95,6 @@ h2 {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
 }
 
@@ -154,20 +157,29 @@ section:nth-last-child(1) {
 .bqCarousel {
     display: grid;
     grid-template-columns: [carousel-left] 1fr [image-left] 8fr [image-right] 1fr [carousel-right];   
+    grid-template-rows: [carousel-top] 50px [image-top] 1fr [carousel-bottom];
     align-items: center;
     justify-items: center;
 }
 
+.bqCarousel > figcaption {
+    grid-column: carousel-left / carousel-right;
+    grid-row: carousel-top / image-top;
+}
+
 .bqImagePrev {
     grid-column: carousel-left / image-left;
+    grid-row: image-top / carousel-bottom;
 }
 
 .bqImageNext {
     grid-column: image-right / carousel-right;
+    grid-row: image-top / carousel-bottom;
 }
 
 .bqImage {
     grid-column: image-left / image-right;
+    grid-row: image-top / carousel-bottom;
     height: auto;
     width: 100%;
     max-width: 600px;
