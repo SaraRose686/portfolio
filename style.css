@@ -98,17 +98,6 @@ a {
     color: inherit;
 }
 
-/* TODO: Figure out Safari issue with hover effect.
--webkit-transition: all 0.5s ease-in-out; 
-transition: all 0.5s ease-in-out; 
-
-
-a:not(.title):hover {
-    font-weight: bold;
-    text-size: larger;
-}
-*/
-
 .icon {
     font-size: 2.0em;
     margin: 5px;
@@ -154,38 +143,56 @@ section:nth-last-child(1) {
     padding-left: 20px;
 }
 
-.bqCarousel {
+hr {
+    border: none;
+    border-bottom: 1px dotted #2B400C;
+}
+
+/* Bible Quest Image Carousel */
+.carousel {
     display: grid;
-    grid-template-columns: [carousel-left] 1fr [image-left] 8fr [image-right] 1fr [carousel-right];   
+    grid-template-columns: [carousel-left] 40px [image-left] 8fr [image-right] 40px [carousel-right];   
     grid-template-rows: [carousel-top] 50px [image-top] 1fr [carousel-bottom];
     align-items: center;
     justify-items: center;
+    margin: 0;
 }
 
-.bqCarousel > figcaption {
+.carousel > figcaption {
     grid-column: carousel-left / carousel-right;
     grid-row: carousel-top / image-top;
 }
 
-.bqImagePrev {
+.cImagePrev {
     grid-column: carousel-left / image-left;
     grid-row: image-top / carousel-bottom;
 }
 
-.bqImageNext {
+.cImageNext {
     grid-column: image-right / carousel-right;
     grid-row: image-top / carousel-bottom;
 }
 
-.bqImage {
+.cImagePrev > .icon,
+.cImageNext > .icon {
+    margin: 0;
+}
+
+.cImage {
     grid-column: image-left / image-right;
     grid-row: image-top / carousel-bottom;
     height: auto;
     width: 100%;
-    max-width: 600px;
     justify-self: center;
 }
 
+#bqImage {
+    max-width: 600px;
+}
+
+#dwImage {
+    max-width: 900px;
+}
 
 /* Hiding sidebar for mobile size */
 @media screen and ( max-width: 549px ) {

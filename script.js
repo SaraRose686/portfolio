@@ -12,26 +12,42 @@ const TITLE = {
 // Bible Quest Images for carousel
 const BQ_IMAGES = {
     files: [{ 
-        src: "images/1-home.jpg",
+        src: "images/bible-1-home.jpg",
         alt: "Bible Quiz home",
     }, { 
-        src: "images/2-question.jpg",
+        src: "images/bible-2-question.jpg",
         alt: "Bible Quiz question",
     }, { 
-        src: "images/3-questionSelect.jpg",
+        src: "images/bible-3-questionSelect.jpg",
         alt: "Bible Quiz question selected",
     }, { 
-        src: "images/4-questionCorrect.jpg",
+        src: "images/bible-4-questionCorrect.jpg",
         alt: "Bible Quiz question answered correct",
     }, { 
-        src: "images/5-bgTooltip.jpg",
+        src: "images/bible-5-bgTooltip.jpg",
         alt: "Bible Quiz tooltip for Bible Gateway",
     }, { 
-        src: "images/6-final.jpg",
+        src: "images/bible-6-final.jpg",
         alt: "Bible Quiz final screen",
     }],
     pos: 0,
 };
+
+// Bible Quest Images for carousel
+const DW_IMAGES = {
+    files: [{ 
+        src: "images/dogsworld-1-landing.png",
+        alt: "It's a Dogs' World landing page",
+    }, { 
+        src: "images/dogsworld-2-search.png",
+        alt: "It's a Dogs' World search results",
+    }, { 
+        src: "images/dogsworld-3-details.png",
+        alt: "It's a Dogs' World dog details",
+    }],
+    pos: 0,
+};
+
 
 function handleTitleTransition() {
     $('.title').on('click', function(e) {
@@ -46,26 +62,52 @@ function handleTitleTransition() {
 }
 
 function handleImageCarousel() {
+    
+    // BIBLE QUEST IMAGE CAROUSEL
     // Clicking to Previous Image
-    $('.bqImagePrev').on('click', function(e) {
+    $('#bqImagePrev').on('click', function(e) {
         e.preventDefault();
         BQ_IMAGES.pos = BQ_IMAGES.pos > 0 ? 
             BQ_IMAGES.pos-1 : 
             BQ_IMAGES.files.length-1;
-        $('.bqImage').attr({
+        $('#bqImage').attr({
             'src': BQ_IMAGES.files[BQ_IMAGES.pos].src, 
             'alt': BQ_IMAGES.files[BQ_IMAGES.pos].alt
         });
     });
 
     // Clicking to Next Image
-    $('.bqImageNext').on('click', function(e) {
+    $('#bqImageNext').on('click', function(e) {
         e.preventDefault();
         BQ_IMAGES.pos = BQ_IMAGES.pos < BQ_IMAGES.files.length-1 ?
             BQ_IMAGES.pos+1 : 0;
-        $('.bqImage').attr({
+        $('#bqImage').attr({
             'src': BQ_IMAGES.files[BQ_IMAGES.pos].src, 
             'alt': BQ_IMAGES.files[BQ_IMAGES.pos].alt
+        });
+    });
+
+    // DOGS' WORLD IMAGE CAROUSEL
+    // Clicking to Previous Image
+    $('#dwImagePrev').on('click', function(e) {
+        e.preventDefault();
+        DW_IMAGES.pos = DW_IMAGES.pos > 0 ? 
+            DW_IMAGES.pos-1 : 
+            DW_IMAGES.files.length-1;
+        $('#dwImage').attr({
+            'src': DW_IMAGES.files[DW_IMAGES.pos].src, 
+            'alt': DW_IMAGES.files[DW_IMAGES.pos].alt
+        });
+    });
+
+    // Clicking to Next Image
+    $('#dwImageNext').on('click', function(e) {
+        e.preventDefault();
+        DW_IMAGES.pos = DW_IMAGES.pos < DW_IMAGES.files.length-1 ?
+            DW_IMAGES.pos+1 : 0;
+        $('#dwImage').attr({
+            'src': DW_IMAGES.files[DW_IMAGES.pos].src, 
+            'alt': DW_IMAGES.files[DW_IMAGES.pos].alt
         });
     });
 }
